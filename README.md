@@ -15,43 +15,44 @@ PROYECTO : [https://www.tinkercad.com/things/gT5FDCP5QfC-parcial-matias-skenen-s
 GDB: [https://onlinegdb.com/JaE_Q7I0b](https://onlinegdb.com/td8VI3gWA)
 ## Componentes utilizados
 
-- Arduino Uno
-- Display de 7 segmentos
-- Resistencias
-- Botones
-- LED verde y LED rojo
+Arduino UNO
+Sensor de temperatura
+Control remoto IR (Infrarrojo)
+Display LCD (16x2 caracteres)
+Servo motor
+Cables y resistencias según sea necesario
+Protoboard para realizar las conexiones
+Dos leds.
 
 ## Configuración de pines
 
 El código utiliza los siguientes pines para conectar los componentes:
 
 ```
-#define LED_ROJO 13
-#define LED_VERDE 12
+#include <LiquidCrystal.h>
+#include <IRremote.h> 
+#include <Servo.h>
 
-#define LED_A 7
-#define LED_B 6
-#define LED_C 5
-#define LED_D 4
-#define LED_E 3
-#define LED_F 2
-#define LED_G A4
+LiquidCrystal led(2,3,4,5,6,7);
+Servo servomotor;
+decode_results results;
 
-#define botonSubir 11
-#define botonBajar 10
-#define botonDetener 9
 
-int nivel = 0;
-int piso;
-int botonSubida;
-int botonBajada;
-int botonDetenido;
+#define DECODE_NEC
+#define pin_Receptor 11
 
-int montaCargaSUBIENDO = false;
-int montaCargaBAJANDO = false;
+int motor = 9;
+int lecturaIR; 
+int codigo = 0;
+int led1 = 13;
+int led2 = 12;
 
-int botonEmergencia = false;
-int acumuladorEmergencia = 0;
+int TMP = 0;
+float temperatura = 0;
+
+int programa;
+int encendido = false;
+int controlActivado = 0;
 ```
 
 
@@ -59,53 +60,24 @@ int acumuladorEmergencia = 0;
 
 En el bucle principal `loop`, se llama a la función `controladorMontacargas()` 
 
-## Función `controladorMontacargas()`
-```cpp
-if(nivel == 0)
-  {
-    montacarga();
-  }
-  
-  //Boton de emergencia, deterner.
-  if(botonDetenido == 0)
-  {
-    acumuladorEmergencia += 1;
-    delay(1000);
-    Serial.println("Emergencia Activado");
-  }
-  
-	// Comienzo de programa
-  if(acumuladorEmergencia % 2 == 0)
-  {
-    if(botonSubida == 0 || botonBajada == 0)
-    {
-      if(botonBajada == 0)
-      {
-        nivel -= 1;
-        prenderLeds(0, 0, 0, 0, 0, 0, 0, 3000);
-        montacarga();
-        mostrarPiso();
-      }
-      else
-      {
-        if(nivel >= 9)
-        {
-          piso = 9;
-          prenderLeds(1, 1, 1, 1, 0, 1, 1, 3000);
-          mostrarPiso();
-        }
-        else
-        {
-          prenderLuces(LED_VERDE);
-          apagarLuces(LED_ROJO);
-          nivel += 1;
-          prenderLeds(0, 0, 0, 0, 0, 0, 0, 3000);
-          montacarga();
-          mostrarPiso();
-        }
 
-      }
-    }
+```cpp
+void loop()
+{
+  controlRemotoIr();
+  if (encendido == true)
+  {
+    //ECENDIDO
+    sensorTemperatura();
+    displayLCD();
+    ServoMotor();
+    Serial.println(controlActivado);
+    
+  } 
+  else
+  {
+    //APAGADO
+    
   }
 ```
 
