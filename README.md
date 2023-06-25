@@ -82,5 +82,4 @@ void loop()
 ```
 
 
-![DIAGRAMA](https://github.com/matiastaoskn/PARCIAL-SPD1/assets/93952537/955de3e1-3e17-4213-8f5c-83232bc0b114)
 
