@@ -12,7 +12,7 @@ PROYECTO : [https://www.tinkercad.com/things/gT5FDCP5QfC-parcial-matias-skenen-s
 
 
 
-GDB: https://onlinegdb.com/JaE_Q7I0b
+GDB: [https://onlinegdb.com/JaE_Q7I0b](https://onlinegdb.com/td8VI3gWA)
 ## Componentes utilizados
 
 - Arduino Uno
