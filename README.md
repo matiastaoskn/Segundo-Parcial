@@ -4,7 +4,7 @@
 Matias Skenen
 
 
-![PARCIAL FINAL](![image](https://github.com/matiastaoskn/Segundo-Parcial/assets/93952537/8ac145a7-4baf-4a82-809b-dc748cb3f3db)
+[Alarma de icendio](![image](https://github.com/matiastaoskn/Segundo-Parcial/assets/93952537/8ac145a7-4baf-4a82-809b-dc748cb3f3db)
 
 PROYECTO : https://www.tinkercad.com/things/gT5FDCP5QfC-parcial-matias-skenen-spd/editel?sharecode=pw4KZWE3-n-MtK_c9UoVyWMinppxntL9BY0DAX19MYs
 
