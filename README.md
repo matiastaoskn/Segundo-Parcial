@@ -4,9 +4,9 @@
 Matias Skenen
 
 
-![PARCIAL FINAL](https://github.com/matiastaoskn/PARCIAL-SPD1/assets/93952537/2ce9109f-ca24-402c-9ae7-1ced7a9f7bbd)
 
-PROYECTO : https://www.tinkercad.com/things/gT5FDCP5QfC-parcial-matias-skenen-spd/editel?sharecode=pw4KZWE3-n-MtK_c9UoVyWMinppxntL9BY0DAX19MYs
+
+PROYECTO : [https://www.tinkercad.com/things/gT5FDCP5QfC-parcial-matias-skenen-spd/editel?sharecode=pw4KZWE3-n-MtK_c9UoVyWMinppxntL9BY0DAX19MYs](https://www.tinkercad.com/things/0VkikNlx48i-this-elonk-musk/editel?sharecode=NT5Waf9X8Ro0fuNkEs6rGUDPugIG1gWdchFpTOKeqSE)
 
 
 
